@@ -4,6 +4,7 @@ import LatestInvoices from '@/app/components/molecules/latest-invoices';
 import { lusitana } from '@/app/components/atoms/fonts';
 
 export default async function Page() {
+  // Dummy data for demonstration purposes
   const totalPaidInvoices = 1000;
   const totalPendingInvoices = 500;
   const numberOfInvoices = 1500;
@@ -18,11 +19,7 @@ export default async function Page() {
         <Card title="Collected" value={totalPaidInvoices} type="collected" />
         <Card title="Pending" value={totalPendingInvoices} type="pending" />
         <Card title="Total Invoices" value={numberOfInvoices} type="invoices" />
-        <Card
-          title="Total Customers"
-          value={numberOfCustomers}
-          type="customers"
-        />
+        <Card title="Total Customers" value={numberOfCustomers} type="customers" />
       </div>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-1 lg:grid-cols-1">
         <RevenueChart />
