@@ -19,7 +19,7 @@ export default async function RevenueChart() {
                 Recent Revenue
             </h2>
             <div className="rounded-xl bg-gray-50 p-4">
-                <div className="mt-0 grid grid-cols-12 items-end gap-2 rounded-md bg-white p-4 md:gap-4">
+                <div className="mt-0 grid grid-cols-12 gap-4 rounded-md bg-white p-4">
                     {/* y-axis */}
                     <div
                         className="mb-6 hidden flex-col justify-between text-sm text-gray-400 sm:flex"
@@ -31,7 +31,7 @@ export default async function RevenueChart() {
                     </div>
 
                     {revenue.map((month) => (
-                        <div key={month.month} className="flex flex-col items-center gap-2">
+                        <div key={month.month} className="col-span-1 flex flex-col items-center gap-2">
                             {/* bars */}
                             <div
                                 className="w-full rounded-md bg-blue-300"
