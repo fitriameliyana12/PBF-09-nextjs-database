@@ -19,10 +19,10 @@ export default async function RevenueChart() {
                 Recent Revenue
             </h2>
             <div className="rounded-xl bg-gray-50 p-4">
-                <div className="mt-0 grid grid-cols-12 gap-4 rounded-md bg-white p-4">
+                <div className="mt-0 flex items-end gap-4 rounded-md bg-white p-4 overflow-x-auto">
                     {/* y-axis */}
                     <div
-                        className="mb-6 hidden flex-col justify-between text-sm text-gray-400 sm:flex"
+                        className="mb-6 flex flex-col justify-between text-sm text-gray-400"
                         style={{ height: `${chartHeight}px` }}
                     >
                         {yAxisLabels.map((label) => (
@@ -31,16 +31,17 @@ export default async function RevenueChart() {
                     </div>
 
                     {revenue.map((month) => (
-                        <div key={month.month} className="col-span-1 flex flex-col items-center gap-2">
+                        <div key={month.month} className="flex flex-col items-center gap-2">
                             {/* bars */}
                             <div
                                 className="w-full rounded-md bg-blue-300"
                                 style={{
                                     height: `${(chartHeight / topLabel) * month.revenue}px`,
+                                    width: '40px', // Adjust the width of each bar
                                 }}
                             ></div>
                             {/* x-axis */}
-                            <p className="-rotate-90 text-sm text-gray-400 sm:rotate-0">
+                            <p className="text-sm text-gray-400">
                                 {month.month}
                             </p>
                         </div>
