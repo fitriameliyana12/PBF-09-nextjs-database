@@ -4,6 +4,11 @@ import LatestInvoices from '@/app/components/molecules/latest-invoices';
 import { lusitana } from '@/app/components/atoms/fonts';
 
 export default async function Page() {
+  const totalPaidInvoices = 1000;
+  const totalPendingInvoices = 500;
+  const numberOfInvoices = 1500;
+  const numberOfCustomers = 200;
+
   return (
     <main>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
@@ -19,7 +24,7 @@ export default async function Page() {
           type="customers"
         />
       </div>
-      <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
+      <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-1 lg:grid-cols-1">
         <RevenueChart />
         <LatestInvoices />
       </div>
