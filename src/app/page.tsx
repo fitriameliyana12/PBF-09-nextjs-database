@@ -26,7 +26,7 @@ export default async function Page() {
           <RevenueChart />
         </div>
         <div className="md:col-span-1 flex flex-col">
-          <LatestInvoices />
+          {/* <LatestInvoices /> */}
         </div>
       </div>
     </main>
